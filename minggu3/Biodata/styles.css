@@ -1,0 +1,53 @@
+header {
+    text-align: center;
+    margin-bottom: 40px
+}
+
+main {
+    width: 600px;
+    margin: 40px auto;
+}
+
+hr {
+    margin-top: -10px;
+    margin-bottom: 30px;
+    color: gray;
+    opacity: 0.4; 
+}
+
+main h2 {
+    margin-top: 50px;
+}
+
+.center {
+    display: block;
+    margin: auto
+}
+
+.biodata-box {
+    display: flex; 
+    max-width: 600px; 
+    margin: 0 auto; 
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.biodata-box > img {
+    width: 200px;
+    height: 300px;
+    margin-top: 8px;
+}
+
+.data-section {
+    margin: 0 20px; 
+    font-size: 1.1rem
+}
+
+.data-line {
+    margin: -10px auto
+}
+
+.data-type {
+    display: inline-block; 
+    width: 150px
+}

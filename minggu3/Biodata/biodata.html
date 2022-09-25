@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Biodata Diri</title>
+    </head>
+    <body>
+        <header>
+            <h1>Biodata Diri</h1>
+        </header>
+        <main>
+            <h2>Data Pribadi</h2>
+            <hr>
+            <section>
+            <div class="biodata-box">
+                <img src="miscFiles\FotoDiriFinal_StevenAdiS(1).jpg" alt="Foto setengah badan"/>
+                <section class="data-section">
+                    <p class="data-line">
+                        <p class="data-type">Nama</p>
+                        <span>: Steven Adi Suryanto</span>
+                    </p>
+                    <p class="data-line">
+                        <p class="data-type">Umur</p>
+                        <span>: 17 tahun</span>
+                    </p>
+                    <p class="data-line">
+                        <p class="data-type">Jenis kelamin</p>
+                        <span>: Laki-laki</span>
+                    </p>
+                    <p class="data-line">
+                        <p class="data-type">Tinggi</p>
+                        <span>: 162 cm</span>
+                    </p>
+                    <p class="data-line">
+                        <p class="data-type">Berat</p>
+                        <span>: 60 kg</span>
+                    </p>
+                </section>
+            </div>
+            <section>
+                <h2>Perkenalan</h2>
+                <hr>
+                <video width="600" height="400" class="center" controls>
+                    <source src="miscFiles/VID20220925145037.mp4" type="video/mp4">
+                    <track label="Indonesia" kind="subtitles" srclang="en" src="subtit.vtt" default>
+                    File cannot be runned
+                </video>
+                <p>
+                <strong>Alternatif</strong>: <button type="button" onclick="playAudio()">Play audio</button>
+                </p>
+                <audio id="suara">
+                    <source src="miscFiles/VID20220925145037.mp3" type="audio/mpeg">
+                </audio>
+            </section>
+            <section>
+                <h2>Pencapaian</h2>
+                <hr>
+                <object data="miscFiles\certificate-Steven Adi.pdf" width="500" height="300" class="center"></object>
+            </section>
+        </main>
+    </body> 
+    <script>
+        var sound  = document.getElementById("suara");
+        
+        function playAudio() {
+            sound.play();
+        }
+    </script>
+</html>
