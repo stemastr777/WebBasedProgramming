@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>HTML 5 - Form</title>
+</head>
+<body style="background-color: #ffeecc;">
+    <header style="text-align: center;">
+        <h1 id="title">Customizing Monster</h1>
+        <p id="title-desc">Make your own partner monster!</p>
+    </header>
+    <main>
+        <section id="player-section">
+            <h1>Customizing Player</h1>
+            <form id="player-form" action="data.php" method="post" target="_blank">
+                <label for="player-name">Enter your name</label>
+                <input type="text" id="player-name" name="player-name" autofocus autocomplete="on">
+                <label for="player-age">Enter your age</label>
+                <input type="number" id="player-age" name="player-age" min="13" max="100">
+                <label for="player-email">Enter your email</label>
+                <input type="email" id="player-email" name="player-email">
+                <label for="email-pass">Enter the password</label>
+                <input id="email-pass" name="email-pass" type="password" maxlength="10" minlength="6">
+                <p>What are you?</p>
+                <input type="radio" id="player-male" name="player-gender" value="male"><label for="player-male">Male</label><br>
+                <input type="radio" id="player-female" name="player-gender" value="female"><label for="player-female">Female</label>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+        <section id="monster-section">
+            <h2>Choose your monster</h2> 
+            <div id="monster-image">
+                <input type="file" accept="image/*" style="margin: 50% 0; background-color: white">
+            </div>
+            <h2>Customize your monster</h2>
+            <div id="main-status">
+                <form id="monster-form" action="data.php" method="post" target="_blank">
+                    <div style="display: flex; justify-content: space-between;">
+                        <div>
+                            <label for="monster-name">What is its name?</label><input type="text" name="monster-name" id="monster-name">
+                        </div>
+                        <div>
+                        <span>Type: </span>
+                            <select name="monster-type">
+                                <option value="Fish">Fish</option>
+                                <option value="Birds">Birds</option>
+                                <option value="Insect">Insect</option>
+                                <option value="Mamal">Mamal</option>
+                                <option value="Wildcat">Wildcat</option>
+                            </select>
+                        </div>
+                        <div>
+                            <span>Element: </span>
+                            <select name="monster-element" id="monster-element">
+                                <option value="Fire">Fire</option>
+                                <option value="Water">Water</option>
+                                <option value="Wind">Wind</option>
+                                <option value="Thunder">Thunder</option>
+                                <option value="Earth">Earth</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="stats-box">
+                        <div class="stats-input">
+                            <label for="strenght">Strenght</label>
+                            <input name="strenght" type="range" id="strenght" max=10 min=1 autocomplete="off" oninput="rangeValue('strenght', 'strength_out')">
+                            <output id="strength_out" name="strength_out" for="strenght">6</output>
+                        </div>
+                        <div class="stats-input">
+                            <label for="agility">Agility</label>
+                            <input name="agility" type="range" id="agility" max=10 min=1 autocomplete="off" oninput="rangeValue('agility', 'agility_out')">
+                            <output id="agility_out" name="agility_out" for="agility">6</output>
+                        </div>
+                        <div class="stats-input">
+                            <label for="inteligent">Inteligent</label>
+                            <input name="inteligent" type="range" id="inteligent" max=10 min=1 autocomplete="off" oninput="rangeValue('inteligent', 'inteligent_out')"> 
+                            <output id="inteligent_out" name="inteligent_out" for="inteligent">6</output>
+                        </div>             
+                    </div>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    const rangeValue = (id_input, id_output) => {
+        const rangeElement = document.getElementById(id_input);
+        document.getElementById(id_output).value = rangeElement.value;
+    }
+</script>
+</html>

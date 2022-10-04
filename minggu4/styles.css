@@ -1,0 +1,75 @@
+main {
+    padding: 10px 15%;
+}
+
+form {
+    padding-left: 20px;
+}
+
+input[type="range"] {
+    width: 200px;
+    display:inline-block
+}
+
+#monster-section input[type="submit"] {
+    display: block;
+    margin: 5% auto;
+    width: 90%;
+    height: 1.5rem
+}
+
+#player-section {
+    margin: 0 auto;
+    max-width: 60%;
+    background-color: white;
+    padding: 20px 40px
+}
+
+#player-section input {
+    display: block;
+    width: 100%;
+    margin: 10px 0 20px 0; 
+}
+
+#monster-section {
+    margin: 10% auto;
+    background-color: white;
+    padding: 3rem
+}
+
+#monster-image {
+    max-width: 250px;
+    height: 300px;
+    background-color: gray;
+    margin: 20px auto;
+    padding-left: 5px
+}
+
+#monster-name {
+    margin-left: 10px
+}
+
+#player-section input[type="radio"] {
+    display: inline;
+    width: unset;
+    margin: -10px 10px 5px 0;
+}
+
+.stats-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+.stats-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.stats-input * {
+    margin: 6px auto
+}
+
+
+
