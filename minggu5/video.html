@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5-Video</title>
+</head>
+<body>
+    <header style="text-align: center;">
+        <h1>HTML Video Exercise</h1>
+    </header>
+    <main>
+        <div style="width: 600px; height: 400px; padding: 20px; margin: -30px auto">
+            <video id="green" width= 600px height= 400px style="display:block; margin: 10px auto;" controls>
+                <source src="sourceFile/mixkit-gardener-taking-care-of-plants-in-a-nursery-43705.mp4" type="video/mp4"></source>
+                This video is amazing
+            </video>
+            <span>Select the playback speed:   </span>
+            <select name="playbackspeed" id="speed">    
+                <option value="1" selected>1</option>
+                <option value=1.5>1.5</option>
+                <option value="2">2</option>
+            </select>
+            <button type="button" onclick="changeSpeed()">Apply</button>
+        </div>
+    </main>
+</body>
+<script>
+    var vid = document.getElementById("green");
+    vid.oncanplay = function() {
+        alert("This video is ready to be played!")
+    };
+    vid.onerror = function() {
+        alert("Something went wrong...")
+    };
+    function changeSpeed() {
+        var speed = document.getElementById("speed").value;
+        vid.playbackRate = speed
+        vid.onratechange = function() {
+            alert('Playback rate changed succesfully')
+        }
+    }
+</script>
+</html>

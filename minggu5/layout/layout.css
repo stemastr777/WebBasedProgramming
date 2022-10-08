@@ -1,0 +1,22 @@
+nav {
+    display: inline-block;
+    height: 100%;
+}
+
+nav > span {
+    font-size: 20px;
+    margin: 5px 10px
+}
+
+main {
+    width: 80%;
+    padding: 40px 60px;
+    border: 2px solid black;
+    border-top: none;
+    margin: 0 auto;
+}
+
+footer {
+    margin: 20px auto;
+    padding: 0 40%
+}
