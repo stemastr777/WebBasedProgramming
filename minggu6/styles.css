@@ -1,0 +1,110 @@
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    text-align: center; 
+    background-color: rgb(4, 20, 43); 
+    height: 13rem;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+main {
+    display: flex; 
+    flex-direction: row-reverse; 
+    justify-content: space-between;
+}
+
+footer {
+    text-align: center; 
+    background-color: rgb(4, 20, 43); 
+    height: 5rem;
+    color: white;
+    margin-bottom: -8px;
+}
+
+th, td {
+    border: 1px black solid;
+}
+
+td {
+    padding-left: 10px;
+}
+
+#header-nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.3rem;
+    margin-top: 3rem;
+}
+
+#sidebar-nav-list {
+    font-size: 1.3rem;
+    line-height: 4rem;
+}
+
+#content-section {
+    width: 75%;
+    border: 2px rgb(4, 20, 43) solid;
+    border-bottom: none;
+    padding: 20px
+}
+
+#content-nav {
+    width: 20%; 
+    height: 350px;
+    border: 2px rgb(4, 20, 43) solid
+ }
+
+#my-image {
+    display: block;
+    width: 200px;
+    height: 300px;
+    background-color:  gray;
+    margin: 20px auto
+}
+
+.nav-item {
+    margin: 5px;
+    width: 10rem;
+    text-align: center;
+}
+
+.home-content {
+    margin-bottom: 3.5rem;
+}
+
+#biodata span {
+    width: 20%;
+    display: inline-block;
+}
+
+#biodata p {
+    display: inline-block;
+    width: 80%
+}
+
+#header-nav {
+    width: 100%;
+    background-color: green;
+}
+
+#back {
+    position: fixed;
+    font-size: 2.5rem;
+    font-weight: bold;
+    top: 95%;
+    left: 80%;
+    background-color: green;
+    height: 2rem;
+    width: 2rem;
+    padding-left: 0.4rem
+}
+
+.fa {
+    display: inline-block;
+    margin: 1rem 0 0 2rem;
+    width: 4%;
+}
