@@ -9,11 +9,8 @@
         <title>Website Profil - About Me</title>
     </head>
     <body>
-        <div id="back">
-            <a href="#title" style="color: white; text-decoration: none;">^</a>
-        </div>
         <header>
-            <h1 id="title" style="margin-top: 4rem; display: inline-block;">Selamat Datang di Website Profil Steven Adi Suryanto!</h1>
+            <h1 style="margin-top: 4rem; display: inline-block;">Selamat Datang di Website Profil Steven Adi Suryanto!</h1>
             <nav id="header-nav">
                 <ul id="header-nav-list">
                     <li class="nav-item"><a href="home.html" style="color: white;">Home</a></li>
@@ -23,15 +20,16 @@
             </nav>
         </header>
         <main>
-            <nav id="content-nav">
+            <nav id="sidebar-nav">
                 <ul id="sidebar-nav-list">
                     <li><a href="#biodata" style="color: black;">Biodata</a></li>
                     <li><a href="#achievement" style="color: black;">Pencapaian</a></li>
-                    <li><a href="#trivial" style="color: black;">Trivial</a></li>
+                    <li><a href="#bonus" style="color: black;">Bonus</a></li>
+                    <li><a href="#another-page" style="color: black;">Halaman lain</a></li>
                 </ul>
             </nav>
-            <section id="content-section">
-                <section id="biodata">
+            <div id="content-section">
+                <section id="biodata" class="item-content">
                     <h2>Biodata</h2>
                     <div style="width: 500px; padding-left: 2rem; line-height: 0.5rem;">
                         <span>Nama </span><p>: Steven Adi Suryanto</p>
@@ -42,14 +40,14 @@
                         <span>Profesi </span><p>: Mahasiswa</p>
                     </div>
                 </section>
-                <section id="achievement">
+                <section id="achievement" class="item-content">
                     <h2>Pencapaian</h2>
-                    <object width="80%" height="400px" style="margin-left: 3rem;" data="file\certificate-Steven Adi.pdf"></object>
+                    <object width="800" height="400" style="margin-left: 3rem;" data="file/certificate-Steven%20Adi.pdf"></object>
                 </section>
-                <section id="trivial">
-                    <h2>Trivial</h2>
-                    <details style="margin-left: 3rem;">
-                        <summary>Klik untuk melihat</summary>
+                <section id="bonus" class="item-content">
+                    <h2>Bonus</h2>
+                    <details>
+                        <summary>Trivial</summary>
                         <ol>
                             <li>Masih belum memiliki hobi.</li>
                             <li>Masa-masa paling membahagiakan baginya adalah masa saat SD.</li>
@@ -58,11 +56,39 @@
                             <li>Sifat di dalam dan di luar tidak jauh beda</li>
                         </ol>
                     </details>
+                    <details>
+                        <summary>Motivation speech</summary>
+                        <iframe style="margin: 2rem auto; display: block; border: 0px;" width="560" height="315" src="https://www.youtube.com/embed/wsNzAuYDgy0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </details>
+                    <details>
+                        <summary>Genre musik favorit</summary>
+                        <audio id="fav-music" style="margin: 2rem auto; display: block" controls>
+                            <source src="audio/simple-piano-melody-9834.mp3" type="audio/mpeg">
+                            Your browser doesn't support HTML5 audio element.
+                        </audio>
+                    </details>
                 </section>
-            </section>
+                <nav id="another-page" class="home-content">
+                    <h2>Perlu tahu apa lagi?</h2>  
+                    <ol>
+                        <li style="margin-bottom: 1rem;">
+                            <a href="aboutMe.html" style="text-decoration: none; color: black">
+                                <b>Pengenalan singkat mengenai orang ini</b>
+                            </a>
+                        </li>
+                        <li style="margin-bottom: 1rem;"><a href="contact.html" style="text-decoration: none; color: black">
+                                <b>Kontak orang ini</b>
+                            </a>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
         </main>
         <footer style="padding-top: 1rem;">
             <p style="text-align: center;">Copyright &copy; 2022</p>
         </footer>
+        <script>
+            document.getElementById("fav-music").volume = 0.2;
+        </script>
     </body>
 </html>

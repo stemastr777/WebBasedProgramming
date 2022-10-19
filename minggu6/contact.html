@@ -10,47 +10,76 @@
         <title>Website Profil - About Me</title>
     </head>
     <body>
-        <div id="back">
-            <a href="#title" style="color: white; text-decoration: none;">^</a>
-        </div>
         <header>
             <h1 id="title" style="margin-top: 4rem; display: inline-block;">Selamat Datang di Website Profil Steven Adi Suryanto!</h1>
             <nav id="header-nav">
                 <ul id="header-nav-list">
                     <li class="nav-item"><a href="home.html" style="color: white;">Home</a></li>
                     <li class="nav-item"><a href="aboutMe.html" style="color: white;">About Me</a></li>
-                    <li class="nav-item"><a href="contact.html" style="color: white;">Contact</a></li>
+                    <li class="nav-item"><a href="contact.html" style="color: white;">Contact</a></li>              
                 </ul>
             </nav>
         </header>
         <main>
-            <nav id="content-nav">
+            <nav id="sidebar-nav">
                 <ul id="sidebar-nav-list">
                     <li><a href="#socmed" style="color: black;">Media sosial</a></li>
                     <li><a href="#direct" style="color: black;">Kontak langsung</a></li>
+                    <li><a href="#another-page" style="color: black;">Halaman lain</a></li>
                 </ul>
             </nav>
-            <section id="content-section">
+            <div id="content-section">
                 <section id="socmed">
-                    <h2>Media Sosial</h2>
+                    <h2 style="margin-bottom: -0.25rem;">Media Sosial</h2>
                     <div>
-                        <div class="fa fa-linkedin"></div><span>linkedin</span>
+                        <div class="fa fa-linkedin"></div><span><a href="https://www.linkedin.com/in/steven-adi-31a621242/" target="_blank">www.linkedin.com/in/steven-adi-31a621242</a></span>
                     </div>
                     <div>
-                        <div class="fa fa-instagram"></div><span>instagram</span>
+                        <div class="fa fa-instagram"></div><span><a href="https://www.instagram.com/stevenadi16/" target="_blank">@stevenadi16</a></span>
                     </div>
                     <div>
-                        <div class="fa fa-twitter"></div><span>twitter</span>
+                        <div class="fa fa-twitter"></div><span><a href="https://twitter.com/StevenAdS777" target="_blank">@StevenAdS777</a></span>
                     </div>
                 </section>
                 <section id="direct">
                     <h2>Kontak langsung</h2>
-                    <label>Email:</p>
-
-                    <p>Jenis masukan:</p>
-                    <textarea placeholder="Ketik masukanmu di sini..." rows="7" cols="60"></textarea>
+                    <form action="data.php" method="post" target="_blank">
+                        <label>Email:</label>
+                        <input type="email" name="email" style="width: 100%;" required>
+                        <p>Jenis masukan:</p>
+                        <div style="margin-bottom: 0.5rem;">
+                            <input type="radio" name="tipe" id="question" value="question"><label for="question">Pertanyaan</label>
+                            <input type="radio" name="tipe" id="suggestion" value="suggestion"><label for="suggestion">Saran</label>
+                        </div>
+                        <textarea name="masukan" placeholder="Ketik masukanmu di sini..." rows="7" cols="60"></textarea>
+                        <div style="margin-top: 1rem;">
+                            <label for="rating">Rating website ini:</label>
+                            <select id="rating" name="rating">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <input id="submit" type="submit" value="Submit" style="width: 100%; margin: 2rem auto;">
+                    </form>
                 </section>
-            </section>
+                <nav id="another-page" class="home-content">
+                    <h2>Perlu tahu apa lagi?</h2>  
+                    <ol>
+                        <li style="margin-bottom: 1rem;">
+                            <a href="aboutMe.html" style="text-decoration: none; color: black">
+                                <b>Pengenalan lebih jauh mengenai orang ini</b>
+                            </a>
+                        </li>
+                        <li style="margin-bottom: 1rem;"><a href="contact.html" style="text-decoration: none; color: black">
+                                <b>Kontak orang ini</b>
+                            </a>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
         </main>
         <footer style="padding-top: 1rem;">
             <p style="text-align: center;">Copyright &copy; 2022</p>

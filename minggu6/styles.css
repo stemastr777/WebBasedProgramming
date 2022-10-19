@@ -3,11 +3,11 @@ html {
 }
 
 header {
-    text-align: center; 
-    background-color: rgb(4, 20, 43); 
     height: 13rem;
+    margin: -1rem -1rem 1.5rem -1rem;
+    background-color: rgb(4, 20, 43); 
     color: white;
-    margin-bottom: 1.5rem;
+    text-align: center; 
 }
 
 main {
@@ -17,11 +17,16 @@ main {
 }
 
 footer {
+    height: 5rem;   
+    margin: 0 -1rem -1rem -1rem;
     text-align: center; 
     background-color: rgb(4, 20, 43); 
-    height: 5rem;
     color: white;
-    margin-bottom: -8px;
+}
+
+details {
+    margin-left: 3rem;
+    margin-bottom: 1rem;
 }
 
 th, td {
@@ -32,6 +37,11 @@ td {
     padding-left: 10px;
 }
 
+#header-nav {
+    width: 100%;
+    background-color: green;
+}
+
 #header-nav-list {
     list-style: none;
     display: flex;
@@ -40,23 +50,24 @@ td {
     margin-top: 3rem;
 }
 
+#sidebar-nav {
+    width: 20%; 
+    height: 350px;
+    border: 2px rgb(4, 20, 43) solid
+ }
+
 #sidebar-nav-list {
     font-size: 1.3rem;
     line-height: 4rem;
 }
 
-#content-section {
-    width: 75%;
+ #content-section {
+    width: 78%;
     border: 2px rgb(4, 20, 43) solid;
     border-bottom: none;
-    padding: 20px
+    padding: 20px 20px 20px 50px;
+    box-sizing: border-box;
 }
-
-#content-nav {
-    width: 20%; 
-    height: 350px;
-    border: 2px rgb(4, 20, 43) solid
- }
 
 #my-image {
     display: block;
@@ -64,16 +75,6 @@ td {
     height: 300px;
     background-color:  gray;
     margin: 20px auto
-}
-
-.nav-item {
-    margin: 5px;
-    width: 10rem;
-    text-align: center;
-}
-
-.home-content {
-    margin-bottom: 3.5rem;
 }
 
 #biodata span {
@@ -86,21 +87,8 @@ td {
     width: 80%
 }
 
-#header-nav {
-    width: 100%;
-    background-color: green;
-}
-
-#back {
-    position: fixed;
-    font-size: 2.5rem;
-    font-weight: bold;
-    top: 95%;
-    left: 80%;
-    background-color: green;
-    height: 2rem;
-    width: 2rem;
-    padding-left: 0.4rem
+#another-page {
+    margin-bottom: 2rem;
 }
 
 .fa {
@@ -108,3 +96,14 @@ td {
     margin: 1rem 0 0 2rem;
     width: 4%;
 }
+
+.nav-item {
+    margin: 5px;
+    width: 10rem;
+    text-align: center;
+}
+
+.item-content {
+    margin: auto 2rem 3rem auto; 
+}
+
