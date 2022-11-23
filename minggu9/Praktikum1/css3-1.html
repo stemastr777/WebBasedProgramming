@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css1.css">
+        <title>CSS3 - Border Radius</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            #content {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 60%;
+                justify-content: center;
+                margin: 5rem auto
+            }
+            .box {
+                background-color: rgb(182, 175, 175); 
+                width: 150px; 
+                height: 200px;
+                margin: 5px;
+                text-align: center;
+                line-height: 200px;
+                font-size: 1.2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="web-heading" style="text-align: center; margin: 20px auto;">Border Radius</h1>
+        <div id="content">
+            <div class="box" id="box1">40px 0 0 0</div>
+            <div class="box" id="box2">0 40px 0 0</div>
+            <div class="box" id="box3">0 0 40px 0</div>
+            <div class="box" id="box4">0 0 0 40px</div>
+            <div class="box" id="box5">40px 0</div>
+            <div class="box" id="box6">0 40px</div>
+            <div class="box" id="box7">40px</div>
+            <div class="box" id="box8">30%</div>
+        </div>
+    </body>
+</html>

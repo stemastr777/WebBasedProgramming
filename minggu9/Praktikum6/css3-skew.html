@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="skew.css">
+        <title>CSS3 - Skew Property</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            #content {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 60%;
+                justify-content: center;
+                margin: 5rem auto
+            }
+            .box {
+                background-color: gray; 
+                width: 150px; 
+                height: 200px;
+                margin: 5px 20px;
+                line-height: 200px;   
+                text-align: center;           
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="web-heading" style="text-align: center; margin: 20px auto;">Skew Property</h1>
+        <div id="content">
+            <div class="box skewx">skewX(20deg)</div>
+            <div class="box skewy">skewY(20deg)</div>
+            <div class="box skewxy">skew(20deg, 20deg)</div>
+        </div>
+    </body>
+</html>

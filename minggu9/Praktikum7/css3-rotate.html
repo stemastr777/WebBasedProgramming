@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="rotate.css">
+        <title>CSS3 - Rotate Function</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            #content {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 60%;
+                justify-content: center;
+                margin: 5rem auto
+            }
+            .box {
+                background-color: gray; 
+                width: 150px; 
+                height: 200px;
+                margin: 5px;
+                line-height: 200px;
+                font-size: 1.5rem;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="web-heading" style="text-align: center; margin: 20px auto;">Rotate Function</h1>
+        <div id="content">
+            <div class="box">Original</div>
+            <div class="box" id="clockwise">rotate(30deg)</div>
+            <div class="box" id="counter-clockwise">rotate(-30deg)</div>
+        </div>
+    </body>
+</html>

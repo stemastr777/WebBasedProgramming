@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="scale.css">
+        <title>CSS3 - Scale Property</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            #content {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 60%;
+                justify-content: center;
+                margin: 5rem auto
+            }
+            .box {
+                background-color: gray; 
+                width: 150px; 
+                height: 200px;
+                margin: 5px;
+                line-height: 200px;
+                font-size: 1.5rem;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="web-heading" style="text-align: center; margin: 20px auto;">Scale Property</h1>
+        <div style="margin-left: 5rem">
+            <p>Kotak "Scaled" diberi properti scaled dengan value 1.5 50% 2 yang artinya:</p>
+            <ul>
+                <li>Panjang diperbesar 1.5x dari ukuran original</li>
+                <li>Lebar dikecilkan 0.5x dari ukuran original</li>
+                <li>Tinggi diperbesar 2x dari ukuran original</li>
+            </ul>
+        </div>   
+        <div id="content">
+            <div class="box" id="original">Original</div>
+            <div class="box" id="translated">Scaled</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css4.css">
+        <title>CSS3 - Translate Property</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            #content {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 60%;
+                justify-content: center;
+                margin: 5rem auto;
+                position: relative;
+                perspective: 100px;
+            }
+            .box {
+                background-color: gray; 
+                width: 150px; 
+                height: 200px;
+                margin: 5px;
+                line-height: 100px;
+                font-size: 1.5rem;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="web-heading" style="text-align: center; margin: 20px auto;">Translate Property</h1>
+        <p>Kotak "Translated" diberi properti translate dengan value 50px 70px 50px yang artinya:</p>
+        <ul>
+            <li>Dipindah 50px ke kanan dari posisi awal</li>
+            <li>Dipindah 70px ke bawah dari posisi awal</li>
+            <li>Didekatkan 50px menuju layar monitor pengguna </li>
+        </ul>
+        <div id="content">
+            <div class="box" id="original">Original</div>
+            <div class="box" id="translated">Translated</div>
+        </div>
+    </body>
+</html>

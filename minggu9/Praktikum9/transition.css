@@ -1,0 +1,18 @@
+.btn {
+    padding: 15px 40px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    transition: box-shadow 0.5s linear;
+}
+
+.btn:active {
+    box-shadow: 7px 6px 28px 4px  rgba(13, 78, 0, 0.5) ;
+    transform: translateY(4px);
+}

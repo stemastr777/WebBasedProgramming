@@ -1,0 +1,8 @@
+#clockwise {
+    transform: rotate(30deg);
+}
+
+#counter-clockwise {
+    transform: rotate(-30deg);
+}
+
