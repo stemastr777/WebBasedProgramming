@@ -1,2 +1,9 @@
+@keyframes first {
+    0%   {background-color:rgb(255, 210, 210);}
+    25%  {background-color:rgb(252, 173, 173); transform: scaleX(1.5) scaleY(0.85);}
+    50%  {background-color:rgb(255, 187, 187);}
+    75%  {background-color:rgb(253, 198, 198);}
+    100% {background-color:rgb(255, 210, 210);}
+}
 
 
