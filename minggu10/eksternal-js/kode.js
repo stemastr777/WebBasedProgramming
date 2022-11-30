@@ -1,0 +1,1 @@
+alert("This alert is taken from kode.js file.")

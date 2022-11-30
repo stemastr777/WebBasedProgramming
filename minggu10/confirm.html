@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Dasar - Dialog Confirm</title>
+</head>
+<body>
+    <p id="text">This iz a random sentence.</p>
+    <button onclick='deleteText(document.getElementById("text"))'>delete</button>
+    <script>
+        function deleteText(el) {
+            let confirmed = confirm("You sure?");
+            el.innerHTML = confirmed? null : el.innerHTML;
+        }
+    </script>
+</body>
+</html>

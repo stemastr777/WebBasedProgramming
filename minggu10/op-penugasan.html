@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Dasar - Operator Penugasan</title>
+        
+    </head>
+    <body>
+        <input type="number" id="num1">
+        <input type="number" id="num2">
+        <input type="submit" value="Check" onclick="getNum(document.getElementById('num1').value, document.getElementById('num2').value)">
+        <section id="operation">
+            <p id="tambah">
+                <span name="text1"></span><span name="opr"> += </span><span name="text2"></span> return <span name="res"></span>
+            </p>
+            <p id="kurang">
+                <span name="text1"></span><span name="opr"> -= </span><span name="text2"></span> return <span name="res"></span>
+            </p>
+            <p id="kali">
+                <span name="text1"></span><span name="opr"> *= </span><span name="text2"></span> return <span name="res"></span>
+            </p>
+            <p id="bagi">
+                <span name="text1"></span><span name="opr"> /=</span><span name="text2"></span> return <span name="res"></span>
+            </p>
+            <p id="pangkat">
+                <span name="text1"></span><span name="opr"> **= </span><span name="text2"></span> return <span name="res"></span>
+            </p>
+            <p id="modulo">
+                <span name="text1"></span><span name="opr"> %=</span><span name="text2"></span> return <span name="res"></span>
+            </p>
+        </section>
+    </body>
+    <script>  
+        let text1 = document.getElementsByName("text1");
+        let text2 = document.getElementsByName("text2");
+        let res = document.getElementsByName("res");
+        var pair = [];
+        function getNum(num1, num2) { 
+            pair = [eval(num1), eval(num2)];
+            for(let i = 0; i < text1.length; i++) {
+                text1[i].innerHTML = pair[0]
+                text2[i].innerHTML = pair[1]
+                res[i].innerHTML = makeRes(pair[0], pair[1], i);
+            }        
+        }
+
+        function makeRes(num1, num2, i) {
+            let ident = document.getElementById("operation").children[i].id;
+            switch(ident) {
+                case "tambah":
+                    return num1 + num2
+                case "kurang":
+                    return num1 - num2
+                case "kali":
+                    return num1 * num2
+                case "bagi":
+                    return (num1/num2).toFixed(2)
+                case "pangkat":
+                    return num1**num2
+                case "modulo":
+                    return num1%num2
+                default: return "default"
+            }
+        }
+    </script>
+</html>

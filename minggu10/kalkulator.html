@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Simpel</title>
+</head>
+<body>
+    <input type="number" id="num1">
+    <select id="opt" name="opt">
+        <option value="+" selected>+</option>
+        <option value="-">-</option>
+        <option value="/">/</option>
+        <option value="*">*</option>
+    </select>
+    <input type="number" id="num2">
+    <button onclick="displayRes()">=</button>
+    <span id="res"></span>
+    <script>
+        function displayRes() {
+            let res = document.getElementById("res");
+            res.innerHTML = makeRes()
+        }
+
+        function makeRes() {
+            let num1 = eval(document.getElementById("num1").value);
+            let num2 = eval(document.getElementById("num2").value);
+            let operator = document.getElementById("opt").value;
+            switch(operator) {
+                case "+":
+                    return num1 + num2;
+                case "-":
+                    return num1 - num2;
+                case "/":
+                    return (num1 / num2).toFixed(2);
+                case "*":
+                    return num1 * num2;
+            }
+        }
+    </script>
+</body>
+</html>

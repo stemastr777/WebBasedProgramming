@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Dasar - Variabel</title>
+</head>
+<body>
+    <p id="text1">This text will be changed.</p>
+    <p id="text2">This text won't be changed.</p>
+    <script>
+        text = "This is a property.";
+        document.getElementById("text1").innerHTML = text;
+        console.log(text);
+        delete text;
+        document.getElementById("text2").innerHTML = text;
+    </script>
+</body>
+</html>

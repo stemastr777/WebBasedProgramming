@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Dasar - Operator Perbandingan</title>
+        
+    </head>
+    <body>
+        <input type="text" id="let1">
+        <input type="text" id="let2">
+        <input type="submit" value="Check" onclick="getNum(document.getElementById('let1').value, document.getElementById('let2').value)">
+        <section id="operation">
+            <p id="sama">
+                <span name="text1"></span><span name="opr"> == </span><span name="text2"></span> return <span name="res"></span>
+            </p>
+            <p id="lb">
+                <span name="text1"></span><span name="opr"> > </span><span name="text2"></span> return <span name="res"></span>
+            </p>
+            <p id="lb-sd">
+                <span name="text1"></span><span name="opr"> >= </span><span name="text2"></span> return <span name="res"></span>
+            </p>
+            <p id="lk">
+                <span name="text1"></span><span name="opr"> &lt </span><span name="text2"></span> return <span name="res"></span>
+            </p>
+            <p id="lk-sd">
+                <span name="text1"></span><span name="opr"> &lt= </span><span name="text2"></span> return <span name="res"></span>
+            </p>
+            <p id="tidak-sama">
+                <span name="text1"></span><span name="opr"> !=</span><span name="text2"></span> return <span name="res"></span>
+            </p>
+        </section>
+    </body>
+    <script>  
+        let text1 = document.getElementsByName("text1");
+        let text2 = document.getElementsByName("text2");
+        let res = document.getElementsByName("res");
+        var pair = [];
+        function getNum(let1, let2) { 
+            pair = [let1, let2];
+            for(let i = 0; i < text1.length; i++) {
+                text1[i].innerHTML = pair[0]
+                text2[i].innerHTML = pair[1]
+                res[i].innerHTML = makeRes(pair[0], pair[1], i);
+            }        
+        }
+
+        function makeRes(let1, let2, i) {
+            let ident = document.getElementById("operation").children[i].id;
+            switch(ident) {
+                case "sama":
+                    return let1 == let2
+                case "lb":
+                    return let1 > let2
+                case "lb-sd":
+                    return let1 >= let2
+                case "lk":
+                    return let1 < let2
+                case "lk-sd":
+                    return let1 <= let2
+                case "tidak-sama":
+                    return let1 != let2
+                default: return "default"
+            }
+        }
+    </script>
+</html>
