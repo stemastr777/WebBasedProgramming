@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic JS - Switch Statement</title>
+</head>
+
+<body>
+    <script>
+        var nilai = prompt("Inputkan nilai akhir:");
+        var grade = "";
+        var status = ""
+
+        if (nilai >= 90) {
+            grade = "A"
+        } else if (nilai >= 70) {
+            grade = "B"
+        } else if (nilai >= 50) {
+            grade = "C"
+        } else if (nilai >= 40) {
+            grade = "D"
+        } else if (nilai >= 30) {
+            grade = "E"
+        } else {
+            grade = "F";
+        }
+
+        switch(grade) {
+            case 'A':
+                status = "Jenius";
+                break;
+            case 'B':
+                status = "Pintar";
+                break;
+            case 'C':
+                status = "Biasa";
+                break;
+            case 'D':
+                status = "Agak bodo";
+                break;
+            case 'E':
+                status = "Bodo";
+                break;
+            case 'F':
+                status = "Percuma hidup";
+                break;
+        }
+        document.write(`<p>Grade anda: ${grade}</p>`); 
+        document.write(`<p>Status anda: ${grade}</p>`); 
+    </script>
+</body>
+
+</html>

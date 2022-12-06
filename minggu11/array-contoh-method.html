@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Basic JS - Array Method</title>
+        <style>
+            body {
+                padding: 0 2rem;
+            }
+            p {
+                margin-left: 1rem;
+            }
+            section {
+                margin: 4rem auto;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="filter">
+            <h2>filter()</h2>
+        </section>
+        <section id="includes">
+            <h2>includes()</h2>
+        </section>
+        <section id="sort">
+            <h2>sort()</h2>
+        </section>
+        <script>
+            var sections = document.getElementsByTagName("section");
+            const angka = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+            for (let i = 0; i < sections.length; i++) {
+                sections[i].innerHTML +=  `<p>Angka awal: ${angka}</p>`
+            }
+
+            const filteredArray = angka.filter(item => item % 2 === 0);
+            sections[0].innerHTML += `<p>Angka genap: ${filteredArray}</p>`
+
+            sections[1].innerHTML += angka.includes(5) ? "<p>Angka awal mengandung angka 5</p>": "<p>Angka awal tidak mengandung angka 5</p>"
+        
+            sections[2].innerHTML += `<p>Angka diurutkan: ${angka.sort(function(a,b){return(a-b)})}<p>`
+        </script>
+    </body>
+</html>

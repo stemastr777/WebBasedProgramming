@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Basic JS - Splicing Array</title>
+    </head>
+    <body>
+        <script>
+            var bunga = ["Mawar", "Melati", "Anggrek", "Sakura"];
+            bunga.forEach(el => {
+                document.write(`<p>${el}</p>`);
+            });
+            document.write("<br><br><br>")
+            bunga.splice(1,2);
+            bunga.forEach(el => {
+                document.write(`<p>${el}</p>`);
+            });
+        </script>
+    </body>
+</html>

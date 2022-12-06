@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic JS - If Else Statement</title>
+</head>
+
+<body>
+    <input id="name-input" type="text" placeholder="Masukkan namamu"></input>
+    <button onclick="getData(document.getElementById('name-input').value)">Click!</button>
+    <p id="res-text"><span id="name"></span></p>
+    <script>
+        var nama = document.getElementById("name");
+        var nameText = document.getElementById("res-text");
+        if (!nama.innerHTML) {
+            nameText.innerHTML = "Masukkan namamu dulu"
+        }
+
+        function getData(data) {
+            nameText.innerHTML =  data? `Namamu adalah <span id='name'>${data}</span>`: `Kamu belum memasukkan nama.`
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JS Project - Adding Data to Table</title>
+</head>
+<body>
+        <h3>Daftar Mahasiswa Mawpres 2023</h3>
+        <form onsubmit="!document.getElementById('tambahMHS').value? '':app.addMhs(document.getElementById('tambahMHS').value)" 
+            action="javascript:void(0);" 
+            method="post"
+        >
+        <input type="text" placeholder="Input Nama MHS" id="tambahMHS">
+        <input type="submit" value="+">
+        </form>
+        <div id="counter">
+                <!--Nilai Dinamis (Javascript )-->
+        </div>
+        <table border="1">
+            <thead>
+                <tr><td>Data Mawpres 2023</td></tr>
+            </thead>
+            <tbody id="daftarNama">
+                <!-- Nilai Dinamis (Javascript)-->
+            </tbody>
+        </table>
+        <script>
+            var app = new function(){
+                this.mhs = ['Jono','Jini','Jane', 'Joni'];
+                this.dt = document.getElementById('daftarNama');
+                this.qty = document.getElementById('counter');
+
+                this.barisAll = function(){
+                    var data = '';
+
+                    if (this.mhs.length > 0){
+                        for (i = 0; i < this.mhs.length; i++){
+                            data += '<tr>';
+                            data += `<td id="${i}">` + this.mhs[i] + `<input type="button" value="Del" onclick="app.deleteMhs(${i})">`;
+                            data += '</td></tr>';
+                        }
+                    }
+                    this.count()
+                    return this.dt.innerHTML = data;
+                };
+
+                this.count = () => {
+                    // counter >> Jumlah : 0 Mahasiswa
+                    return this.qty.innerHTML = `Jumlah mahasiswa: ${this.mhs.length}`;
+                }
+
+                this.addMhs = (mhs) => {
+                    // Tambah MHS
+                    this.mhs.push(mhs);
+                    this.count();
+                    this.barisAll();
+                }
+
+                this.deleteMhs = (index) => {
+                    this.mhs.splice(index,1);
+                    this.count();
+                    this.barisAll();
+                }
+            }
+            app.barisAll();
+        </script>
+    </body>
+    </html>
