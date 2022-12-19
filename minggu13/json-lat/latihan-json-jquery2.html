@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mari Belajar Coding</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $.getJSON("data.json", function (result) {
+            console.log(result);
+            $.each(result, function (i) {
+                document.getElementById("demo").innerHTML += "NIM :" +
+                    result[i].nim + "<br>Nama :" + result[i].nama + "<br>Alamat :" +
+                    result[i].alamat + "<br><br>";
+            });
+        }); 
+    </script>
+</head>
+
+<body>
+    <div id="demo"></div>
+</body>
+
+</html>
